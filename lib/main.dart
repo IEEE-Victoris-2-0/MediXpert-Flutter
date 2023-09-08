@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:tecdoc/view/screen/onboarding.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Future.delayed(const Duration(seconds: 30));
+  FlutterNativeSplash.remove();
   runApp(const MyApp());
 }
 
@@ -9,6 +14,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    return const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "midxipert",
+        home: OnBoardingScreen());
   }
 }
