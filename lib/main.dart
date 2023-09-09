@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:tecdoc/view/screen/auth/signup.dart';
 import 'package:tecdoc/view/screen/onboarding.dart';
 
 Future<void> main() async {
@@ -17,6 +18,6 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "midxipert",
-        home: OnBoardingScreen());
+        home: Signup());
   }
 }

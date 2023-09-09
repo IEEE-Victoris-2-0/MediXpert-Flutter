@@ -19,8 +19,6 @@ class CustomField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 314,
-      height: 66,
       child: TextFormField(
         controller: mycontroller,
         validator: valid,
@@ -47,6 +45,7 @@ class CustomField extends StatelessWidget {
               color: Color(0xFFF6F2FF),
             ),
             border: OutlineInputBorder(
+              borderSide: BorderSide.none,
               borderRadius: BorderRadius.circular(44),
             )),
       ),
