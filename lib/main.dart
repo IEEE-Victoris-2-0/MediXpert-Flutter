@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tecdoc/view/screen/splash.dart';
+import 'package:tecdoc/view/screen/auth/signup.dart';
+import 'package:tecdoc/view/screen/onboarding.dart';
 
 void main() {
   runApp(const MyApp());
