@@ -1,5 +1,3 @@
-// ignore_for_file: unrelated_type_equality_checks
-
 import 'package:flutter/material.dart';
 import 'package:tecdoc/core/shared/custombuttom.dart';
 import 'package:tecdoc/core/shared/customfield.dart';
