@@ -14,12 +14,10 @@ class OnBoardingScreen extends StatelessWidget {
             SvgPicture.asset("assets/images/onboarding.svg"),
             Stack(
               children: [
-                Expanded(
-                  child: SvgPicture.asset(
-                    "assets/images/Rectangle 139.svg",
-                    fit: BoxFit.cover,
-                    height: 400,
-                  ),
+                SvgPicture.asset(
+                  "assets/images/Rectangle 139.svg",
+                  fit: BoxFit.cover,
+                  height: 400,
                 ),
                 const Positioned(
                   top: 100,
@@ -58,7 +56,7 @@ class OnBoardingScreen extends StatelessWidget {
                   top: 300,
                   left: 55,
                   child: CustomButtomBoard(),
-                )
+                ),
               ],
             ),
           ],

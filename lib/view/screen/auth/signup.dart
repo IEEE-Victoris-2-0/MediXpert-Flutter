@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tecdoc/core/shared/custombuttom.dart';
 import 'package:tecdoc/core/shared/customfield.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tecdoc/view/screen/auth/login.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -76,7 +77,7 @@ class _SignupState extends State<Signup> {
                         hinttext: "username",
                         iconData: Icons.person,
                         valid: (text) {
-                          if (text!.length == 0) {
+                          if (text!.isEmpty) {
                             return "This field is required";
                           } else {
                             return null;
@@ -90,7 +91,7 @@ class _SignupState extends State<Signup> {
                         hinttext: "email",
                         iconData: Icons.email,
                         valid: (text) {
-                          if (text!.length == 0) {
+                          if (text!.isEmpty) {
                             return "This field is required";
                           } else {
                             return null;
@@ -104,7 +105,7 @@ class _SignupState extends State<Signup> {
                           hinttext: "password",
                           iconData: Icons.lock,
                           valid: (text) {
-                            if (text!.length == 0) {
+                            if (text!.isEmpty) {
                               return "This field is required";
                             } else {
                               return null;
@@ -117,7 +118,7 @@ class _SignupState extends State<Signup> {
                           hinttext: "Phone number",
                           iconData: Icons.call,
                           valid: (text) {
-                            if (text!.length == 0) {
+                            if (text!.isEmpty) {
                               return "This field is required";
                             } else {
                               return null;
@@ -229,8 +230,13 @@ class _SignupState extends State<Signup> {
                   left: 169,
                   right: 166,
                 ),
-                child: InkWell(
-                  onTap: () {},
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Login()),
+                    );
+                  },
                   child: const Text(
                     "Sign in",
                     style: TextStyle(
