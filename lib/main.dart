@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:tecdoc/view/screen/splash.dart';
 
 void main() {
