@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tecdoc/view/screen/layout.dart';
 import 'package:tecdoc/view/widget/authWidget/login/divider.dart';
 
 import '../../../core/shared/custombuttom.dart';
@@ -114,9 +115,16 @@ class _LoginState extends State<Login> {
                 top: 550,
                 left: 15,
                 child: Custombuttom(
-                  buttontext: "Sign Up",
+                  buttontext: "Sign In",
                   onPressed: () {
-                    myKey.currentState!.validate();
+                    if (myKey.currentState!.validate()) {
+                      // Navigate to the HomeScreen when the button is pressed.
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const LayoutScreen(),
+                        ),
+                      );
+                    }
                   },
                 ),
               ),
