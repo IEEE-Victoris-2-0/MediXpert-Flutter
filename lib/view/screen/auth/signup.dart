@@ -3,6 +3,7 @@ import 'package:tecdoc/core/shared/custombuttom.dart';
 import 'package:tecdoc/core/shared/customfield.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tecdoc/view/screen/auth/login.dart';
+import 'package:tecdoc/view/screen/home.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -131,18 +132,23 @@ class _SignupState extends State<Signup> {
               SizedBox(
                 height: 54,
               ),
-             Row(
-              children: [
-                Spacer(),
-                Custombuttom(
-                buttontext: "Sign Up",
-                onPressed: () {
-                  myKey.currentState!.validate();
-                },
-              ), 
-              Spacer(),
-              ],
-             ),
+              Row(
+                children: [
+                  Spacer(),
+                  Custombuttom(
+                    buttontext: "Sign Up",
+                    onPressed: () {
+                      if (myKey.currentState!.validate()) {
+                        Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (context) {
+                          return Home();
+                        }));
+                      }
+                    },
+                  ),
+                  Spacer(),
+                ],
+              ),
               Container(
                 padding: const EdgeInsets.only(
                   top: 28,
