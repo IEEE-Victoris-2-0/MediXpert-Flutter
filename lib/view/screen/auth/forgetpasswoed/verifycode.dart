@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tecdoc/view/widget/auth/Forgetpassword/forgetbutton.dart';
-import 'package:tecdoc/view/widget/auth/Forgetpassword/forgetfield.dart';
+import 'package:tecdoc/view/screen/auth/forgetpasswoed/forgetpassword.dart';
+import 'package:tecdoc/view/screen/auth/forgetpasswoed/resetpassword.dart';
+import 'package:tecdoc/view/widget/authWidget/login/Forgetpassword/forgetbutton.dart';
+import 'package:tecdoc/view/widget/authWidget/login/Forgetpassword/forgetfield.dart';
 
 class VerifyCode extends StatelessWidget {
   const VerifyCode({super.key});
@@ -16,26 +17,27 @@ class VerifyCode extends StatelessWidget {
           ),
           Row(
             children: [
-              const SizedBox(
-                width: 35,
-              ),
+              Spacer(),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context){
+                    return ForgetPassword();
+                    },),);
+                },
                 icon: const Icon(
                   Icons.arrow_back_ios,
                   color: Color(0xFF7642F9),
                 ),
               ),
-              const SizedBox(
-                width: 52,
-              ),
+             Spacer(),
               const Text(
-                "Verify your Email",
+                "Create New Password",
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
                     color: Color(0xFF7642F9)),
               ),
+              Spacer(),
             ],
           ),
           const SizedBox(
@@ -45,7 +47,7 @@ class VerifyCode extends StatelessWidget {
             children: [
               const Spacer(),
               SizedBox(
-                child: SvgPicture.asset("assets/images/verify.svg"),
+                child: Image.asset("assets/images/verify.png"),
               ),
               const Spacer(),
             ],
@@ -146,15 +148,22 @@ class VerifyCode extends StatelessWidget {
               const Spacer(),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 52,
           ),
-          Row(
+           Row(
             children: [
               Spacer(),
-              ForgetButton(buttontext: "Verify"),
+              ForgetButton(buttontext: "Verify",onPressed: (){
+                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context){
+                    return ResetPassword();
+                    },),);
+              },),
               Spacer(),
             ],
+          ),
+          SizedBox(
+            height: 99,
           ),
         ],
       ),

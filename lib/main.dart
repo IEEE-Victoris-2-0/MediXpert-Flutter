@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tecdoc/view/screen/auth/forgetpasswoed/forgetpassword.dart';
-import 'package:tecdoc/view/screen/auth/forgetpasswoed/verifycode.dart';
-import 'package:tecdoc/view/screen/auth/signup.dart';
-import 'package:tecdoc/view/screen/splash.dart';
 import 'package:tecdoc/view/screen/onboarding.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +14,6 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "midxipert",
-        home: ForgetPasswoed());
+        home: OnBoardingScreen());
   }
-}
+} 

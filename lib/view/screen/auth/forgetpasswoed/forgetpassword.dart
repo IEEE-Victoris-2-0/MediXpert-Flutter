@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tecdoc/core/shared/customfield.dart';
-import 'package:tecdoc/view/widget/auth/Forgetpassword/forgetbutton.dart';
+import 'package:tecdoc/view/screen/auth/forgetpasswoed/verifycode.dart';
+import 'package:tecdoc/view/screen/auth/login.dart';
+import 'package:tecdoc/view/widget/authWidget/login/Forgetpassword/forgetbutton.dart';
 
-class ForgetPasswoed extends StatelessWidget {
-  const ForgetPasswoed({super.key});
+class ForgetPassword extends StatelessWidget {
+  const ForgetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
-  GlobalKey<FormState> myKey = GlobalKey<FormState>();
+    GlobalKey<FormState> myKey = GlobalKey<FormState>();
     return Scaffold(
       body: ListView(
         children: [
@@ -40,7 +42,12 @@ class ForgetPasswoed extends StatelessWidget {
                   top: 35,
                   left: 35,
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) {
+                        return Login();
+                      }));
+                    },
                     icon: const Icon(
                       Icons.arrow_back_ios,
                       color: Colors.white,
@@ -98,9 +105,9 @@ class ForgetPasswoed extends StatelessWidget {
                       hinttext: "Email",
                       iconData: Icons.email,
                       valid: (text) {
-                        if (text == 0) {
-                          return "Please enter your email";
-                        }else{
+                        if (text!.isEmpty) {
+                          return "This field is required";
+                        } else {
                           return null;
                         }
                       }),
@@ -118,11 +125,22 @@ class ForgetPasswoed extends StatelessWidget {
               ForgetButton(
                 buttontext: "Send",
                 onPressed: () {
-                  myKey.currentState!.validate();
+                  if (myKey.currentState!.validate()) {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return VerifyCode();
+                        },
+                      ),
+                    );
+                  }
                 },
               ),
               const Spacer()
             ],
+          ),
+          SizedBox(
+            height: 99,
           ),
         ],
       ),
