@@ -98,7 +98,7 @@ class _LoginState extends State<Login> {
                 left: 228,
                 child: GestureDetector(
                   child: const Text(
-                    'Forgot Password',
+                    'Forgot Password?',
                     style: TextStyle(
                       color: Color(0xFFC0C0C0), // Use the desired color
                       fontFamily: 'Inter', // Use the desired font family
@@ -128,7 +128,8 @@ class _LoginState extends State<Login> {
                   },
                 ),
               ),
-              const Positioned(top: 650, left: 50, child: CustomDivider()),
+              const Positioned(
+                  top: 630, left: 50, right: 50, child: CustomDivider()),
               const Positioned(top: 670, left: 80, child: LoginWith())
             ],
           ),
