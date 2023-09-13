@@ -3,6 +3,7 @@ import 'package:tecdoc/core/shared/custombuttom.dart';
 import 'package:tecdoc/core/shared/customfield.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tecdoc/view/screen/auth/login.dart';
+import 'package:tecdoc/view/screen/home.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -128,14 +129,29 @@ class _SignupState extends State<Signup> {
                   ),
                 ),
               ),
-              Custombuttom(
-                buttontext: "Sign Up",
-                onPressed: () {
-                  myKey.currentState!.validate();
-                },
+              SizedBox(
+                height: 54,
+              ),
+              Row(
+                children: [
+                  Spacer(),
+                  Custombuttom(
+                    buttontext: "Sign Up",
+                    onPressed: () {
+                      if (myKey.currentState!.validate()) {
+                        Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (context) {
+                          return Home();
+                        }));
+                      }
+                    },
+                  ),
+                  Spacer(),
+                ],
               ),
               Container(
                 padding: const EdgeInsets.only(
+                  top: 28,
                   left: 49,
                   right: 49,
                   bottom: 19,
@@ -155,7 +171,7 @@ class _SignupState extends State<Signup> {
                       height: 15,
                       width: 75,
                       child: Text(
-                        "Or sign in with",
+                        "Or sign up with",
                         style: TextStyle(
                             color: Color(0xFFB8B8B8),
                             fontWeight: FontWeight.w400,
@@ -193,9 +209,7 @@ class _SignupState extends State<Signup> {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width: 105,
-                    ),
+                    Spacer(),
                     InkWell(
                       onTap: () {},
                       child: CircleAvatar(
@@ -225,29 +239,32 @@ class _SignupState extends State<Signup> {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 169,
-                  right: 166,
-                ),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Login()),
-                    );
-                  },
-                  child: const Text(
-                    "Sign in",
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xFF0078D7),
+              Row(
+                children: [
+                  Spacer(),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Login()),
+                      );
+                    },
+                    child: const Text(
+                      "Sign in",
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF0078D7),
+                      ),
                     ),
                   ),
-                ),
+                  Spacer(),
+                ],
               ),
             ],
+          ),
+          SizedBox(
+            height: 20,
           ),
         ],
       ),

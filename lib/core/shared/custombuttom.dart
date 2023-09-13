@@ -14,32 +14,25 @@ class Custombuttom extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPressed,
-      child: Container(
-          padding: const EdgeInsets.only(
-            left: 118,
-            right: 126,
-            top: 21,
-            bottom: 21,
-          ),
-          child: Stack(
-            children: [
-              SvgPicture.asset('assets/images/button.svg'),
-               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 37,
-                  vertical: 7,
-                ),
-                child: Text(
-                  buttontext,
-                  style: const TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xFFFFFFFF),
-                  ),
-                ),
+      child: Stack(
+        children: [
+          SvgPicture.asset('assets/images/button.svg'),
+           Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 37,
+              vertical: 7,
+            ),
+            child: Text(
+              buttontext,
+              style: const TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w400,
+                color: Color(0xFFFFFFFF),
               ),
-            ],
-          )),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
