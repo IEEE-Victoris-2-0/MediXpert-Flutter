@@ -24,14 +24,20 @@ class OnBoardingScreen extends StatelessWidget {
                   right: 52, // Adjust the top position as needed
                   left: 55, // Adjust the left position as needed
                   child: Center(
-                    child: Text(
-                      "      A Pharmacy\nfor all your needs.",
-                      style: TextStyle(
-                        fontFamily: "Poppins",
-                        fontStyle: FontStyle.normal,
-                        fontSize: 30.0, // Adjust the font size as needed
-                        color: Colors.white, // Adjust the text color as needed
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text(
+                          "      A Pharmacy\nfor all your needs.",
+                          style: TextStyle(
+                            fontFamily: "Poppins",
+                            fontStyle: FontStyle.normal,
+                            fontSize: 30.0, // Adjust the font size as needed
+                            color:
+                                Colors.white, // Adjust the text color as needed
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -40,15 +46,20 @@ class OnBoardingScreen extends StatelessWidget {
                   left: 71,
                   right: 74,
                   child: Center(
-                    child: Text(
-                      "        With few clicks ,place your\n order and wait for it to be delivered",
-                      style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white,
-                        fontFamily: "Poppins",
-                        fontStyle: FontStyle.normal,
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "        With few clicks ,place your\n order and wait for it to be delivered",
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            fontFamily: "Poppins",
+                            fontStyle: FontStyle.normal,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

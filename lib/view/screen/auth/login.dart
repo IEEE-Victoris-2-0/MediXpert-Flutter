@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tecdoc/view/widget/authWidget/login/backbutton.dart';
+import 'package:tecdoc/view/screen/home.dart';
 import 'package:tecdoc/view/widget/authWidget/login/custombuttom.dart';
 import 'package:tecdoc/view/widget/authWidget/login/customfield.dart';
 
@@ -151,7 +151,11 @@ class _LoginState extends State<Login> {
                     Spacer(),
                     Custombuttom(
                       buttontext: "Sign in",
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context){
+                          return Home();
+                        }));
+                      },
                     ),
                     Spacer(),
                   ],

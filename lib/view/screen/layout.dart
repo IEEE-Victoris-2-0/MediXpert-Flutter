@@ -32,6 +32,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFE4DAFD),
       body: _pages[_selectedIndex],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -62,6 +63,8 @@ class _LayoutScreenState extends State<LayoutScreen> {
             onTap: _onItemTapped,
             backgroundColor: const Color(0xFF7642F9),
             type: BottomNavigationBarType.fixed,
+            showSelectedLabels: true,
+            showUnselectedLabels: false,
           ),
         ),
       ),
