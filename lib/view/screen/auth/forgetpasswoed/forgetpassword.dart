@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tecdoc/core/shared/customfield.dart';
+import 'package:tecdoc/view/widget/authWidget/login/customfield.dart';
 import 'package:tecdoc/view/screen/auth/forgetpasswoed/verifycode.dart';
 import 'package:tecdoc/view/screen/auth/login.dart';
-import 'package:tecdoc/view/widget/authWidget/login/Forgetpassword/forgetbutton.dart';
+import 'package:tecdoc/view/widget/authWidget/Forgetpassword/forgetbutton.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});

@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tecdoc/view/screen/layout.dart';
 import 'package:tecdoc/view/widget/authWidget/login/divider.dart';
-
-import '../../../core/shared/custombuttom.dart';
 import '../../widget/authWidget/login/backbutton.dart';
+import '../../widget/authWidget/login/custombuttom.dart';
 import '../../widget/authWidget/login/loginwith.dart';
 import '../../widget/authWidget/login/textfield.dart';
 
@@ -103,6 +102,7 @@ class _LoginState extends State<Login> {
                       color: Color(0xFFC0C0C0), // Use the desired color
                       fontFamily: 'Inter', // Use the desired font family
                       fontSize: 10.0, // Use the desired font size
+
                       fontStyle: FontStyle.normal,
                       fontWeight:
                           FontWeight.w400, // Use the desired font weight
