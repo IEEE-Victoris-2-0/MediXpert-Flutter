@@ -112,8 +112,8 @@ class _LoginState extends State<Login> {
                 ),
               ),
               Positioned(
-                top: 550,
-                left: 15,
+                top: 560,
+                left: 130,
                 child: Custombuttom(
                   buttontext: "Sign In",
                   onPressed: () {

@@ -129,24 +129,24 @@ class _SignupState extends State<Signup> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 54,
               ),
               Row(
                 children: [
-                  Spacer(),
+                  const Spacer(),
                   Custombuttom(
                     buttontext: "Sign Up",
                     onPressed: () {
                       if (myKey.currentState!.validate()) {
                         Navigator.of(context).pushReplacement(
                             MaterialPageRoute(builder: (context) {
-                          return Home();
+                          return const Home();
                         }));
                       }
                     },
                   ),
-                  Spacer(),
+                  const Spacer(),
                 ],
               ),
               Container(
@@ -209,7 +209,7 @@ class _SignupState extends State<Signup> {
                         ),
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     InkWell(
                       onTap: () {},
                       child: CircleAvatar(
@@ -241,7 +241,7 @@ class _SignupState extends State<Signup> {
               ),
               Row(
                 children: [
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -258,12 +258,12 @@ class _SignupState extends State<Signup> {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                 ],
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
         ],

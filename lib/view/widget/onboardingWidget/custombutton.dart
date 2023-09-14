@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tecdoc/view/screen/auth/login.dart';
+import 'package:tecdoc/view/screen/auth/signup.dart';
 
 class CustomButtomBoard extends StatelessWidget {
   const CustomButtomBoard({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class CustomButtomBoard extends StatelessWidget {
           // Navigate to the "Sign Up" screen on button click
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Login()),
+            MaterialPageRoute(builder: (context) => const Signup()),
           );
         },
         style: ElevatedButton.styleFrom(

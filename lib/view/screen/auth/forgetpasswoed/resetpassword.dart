@@ -29,8 +29,9 @@ class _ResetPasswordState extends State<ResetPassword> {
               ),
               IconButton(
                 onPressed: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context){
-                    return ForgetPassword();
+                  Navigator.of(context)
+                      .pushReplacement(MaterialPageRoute(builder: (context) {
+                    return const ForgetPassword();
                   }));
                 },
                 icon: const Icon(
@@ -119,7 +120,7 @@ class _ResetPasswordState extends State<ResetPassword> {
               const Spacer(),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 99,
           ),
         ],

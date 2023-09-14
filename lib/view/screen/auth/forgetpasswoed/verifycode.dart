@@ -17,19 +17,23 @@ class VerifyCode extends StatelessWidget {
           ),
           Row(
             children: [
-              Spacer(),
+              const Spacer(),
               IconButton(
                 onPressed: () {
-                   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context){
-                    return ForgetPassword();
-                    },),);
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const ForgetPassword();
+                      },
+                    ),
+                  );
                 },
                 icon: const Icon(
                   Icons.arrow_back_ios,
                   color: Color(0xFF7642F9),
                 ),
               ),
-             Spacer(),
+              const Spacer(),
               const Text(
                 "Create New Password",
                 style: TextStyle(
@@ -37,7 +41,7 @@ class VerifyCode extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     color: Color(0xFF7642F9)),
               ),
-              Spacer(),
+              const Spacer(),
             ],
           ),
           const SizedBox(
@@ -151,18 +155,25 @@ class VerifyCode extends StatelessWidget {
           const SizedBox(
             height: 52,
           ),
-           Row(
+          Row(
             children: [
-              Spacer(),
-              ForgetButton(buttontext: "Verify",onPressed: (){
-                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context){
-                    return ResetPassword();
-                    },),);
-              },),
-              Spacer(),
+              const Spacer(),
+              ForgetButton(
+                buttontext: "Verify",
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const ResetPassword();
+                      },
+                    ),
+                  );
+                },
+              ),
+              const Spacer(),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 99,
           ),
         ],

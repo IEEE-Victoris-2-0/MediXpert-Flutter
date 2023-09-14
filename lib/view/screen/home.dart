@@ -144,20 +144,28 @@ class _HomeState extends State<Home> {
               children: [
                 Column(
                   children: [
-                    Container(
-                        width: 64,
-                        height: 59,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: const Color(
-                              0xFFC8B3FC), // Hexadecimal color value
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: SvgPicture.asset(
-                            "assets/images/Group 4.svg",
+                    InkWell(
+                      onTap: () {
+                        //               Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => const ),
+                        // );
+                      },
+                      child: Container(
+                          width: 64,
+                          height: 59,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: const Color(
+                                0xFFC8B3FC), // Hexadecimal color value
                           ),
-                        )),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SvgPicture.asset(
+                              "assets/images/Group 4.svg",
+                            ),
+                          )),
+                    ),
                     const SizedBox(
                       height: 3,
                     ),

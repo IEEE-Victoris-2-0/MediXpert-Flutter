@@ -45,7 +45,7 @@ class ForgetPassword extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).pushReplacement(
                           MaterialPageRoute(builder: (context) {
-                        return Login();
+                        return const Login();
                       }));
                     },
                     icon: const Icon(
@@ -129,7 +129,7 @@ class ForgetPassword extends StatelessWidget {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
                         builder: (context) {
-                          return VerifyCode();
+                          return const VerifyCode();
                         },
                       ),
                     );
@@ -139,7 +139,7 @@ class ForgetPassword extends StatelessWidget {
               const Spacer()
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 99,
           ),
         ],
