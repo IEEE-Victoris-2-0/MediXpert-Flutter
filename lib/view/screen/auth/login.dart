@@ -1,71 +1,80 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tecdoc/view/screen/layout.dart';
-import 'package:tecdoc/view/widget/authWidget/login/divider.dart';
-
-import '../../../core/shared/custombuttom.dart';
-import '../../widget/authWidget/login/backbutton.dart';
-import '../../widget/authWidget/login/loginwith.dart';
-import '../../widget/authWidget/login/textfield.dart';
+import 'package:tecdoc/view/widget/authWidget/login/backbutton.dart';
+import 'package:tecdoc/view/widget/authWidget/login/custombuttom.dart';
+import 'package:tecdoc/view/widget/authWidget/login/customfield.dart';
 
 class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+  const Login({super.key});
 
   @override
   State<Login> createState() => _LoginState();
 }
 
 class _LoginState extends State<Login> {
-  GlobalKey<FormState> myKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        body: Form(
-          key: myKey,
-          child: Stack(
-            children: [
-              Positioned(
-                top: 0,
-                left: 0,
-                child: Image.asset(
-                  "assets/images/login (app).jpg", // Adjust the image path
-                  height: 365, // Adjust the height as needed
-                  width: 400, // Adjust the width as needed
-                  fit: BoxFit.fill, // Use BoxFit.cover to cover the area
-                ),
-              ),
-              Positioned(
-                top: 0,
-                left: 0,
-                child: SvgPicture.asset(
-                  "assets/images/medicin.svg",
-                  height: 365, // Adjust the height as needed
-                  width: 600, // Adjust the width as needed
-                  fit: BoxFit.fill,
-                ),
-              ),
-              const Positioned(top: 40, left: 20, child: BackButtonWidget()),
-              Positioned(
-                left: 2,
-                right: 2,
-                top: 250,
-                child: Container(
-                  width: 375,
-                  height: 550,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(50),
-                      topRight: Radius.circular(50),
-                    ),
+        child: Scaffold(
+      body: SingleChildScrollView(
+          child: Column(
+        children: [
+          Container(
+            height: 266,
+            width: double.infinity,
+            child: Stack(
+              children: [
+                SizedBox(
+                  height: 266,
+                  width: double.infinity,
+                  child: Image.asset(
+                    'assets/images/login22.jpg',
+                    fit: BoxFit.fill,
                   ),
                 ),
-              ),
-              const Positioned(
-                top: 293,
-                left: 89,
-                child: Text(
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 20,
+                    top: 54,
+                  ),
+                  child: Container(
+                    height: 46,
+                    width: 59,
+                    decoration: BoxDecoration(
+                        color: const Color.fromRGBO(255, 255, 255, 0.42),
+                        borderRadius: BorderRadius.circular(13)),
+                    child: IconButton(
+                      onPressed: () {
+                        // Handle the back button tap here, e.g., navigate back.
+                        Navigator.of(context).pop();
+                      },
+                      icon: const Icon(
+                        Icons.arrow_back_ios_new_outlined,
+                        size: 30, // Adjust the size as needed
+                        color: Color.fromRGBO(255, 255, 255, 0.42),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            height: 550,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(100),
+                topLeft: Radius.circular(100),
+              )
+            ),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 27,
+                ),
+                Text(
                   'Welcome back!',
                   style: TextStyle(
                     color: Color(0xFF7642F9), // Use the desired color
@@ -76,11 +85,10 @@ class _LoginState extends State<Login> {
                     height: 1.0, // Use 1.0 for normal line height
                   ),
                 ),
-              ),
-              const Positioned(
-                top: 336,
-                left: 119,
-                child: Text(
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
                   'Login to your account',
                   style: TextStyle(
                     color: Color(0xFFC0C0C0), // Use the desired color
@@ -91,49 +99,143 @@ class _LoginState extends State<Login> {
                     height: 1.0, // Use 1.0 for normal line height
                   ),
                 ),
-              ),
-              const Positioned(top: 380, left: 34, child: TextFields()),
-              Positioned(
-                top: 540,
-                left: 228,
-                child: GestureDetector(
-                  child: const Text(
-                    'Forgot Password',
-                    style: TextStyle(
-                      color: Color(0xFFC0C0C0), // Use the desired color
-                      fontFamily: 'Inter', // Use the desired font family
-                      fontSize: 10.0, // Use the desired font size
-                      fontStyle: FontStyle.normal,
-                      fontWeight:
-                          FontWeight.w400, // Use the desired font weight
-                      height: 1.0, // Use 1.0 for normal line height
+                SizedBox(
+                  height: 30,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 34, right: 27),
+                  child: CustomField(
+                      hinttext: 'Email',
+                      iconData: Icons.email,
+                      valid: (tect) {
+                        return null;
+                      }),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 34, right: 27),
+                  child: CustomField(
+                      hinttext: 'password',
+                      iconData: Icons.lock,
+                      valid: (tect) {
+                        return null;
+                      }),
+                ),
+                SizedBox(
+                  height: 9,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 228),
+                  child: GestureDetector(
+                    child: const Text(
+                      'Forgot Password?',
+                      style: TextStyle(
+                        color: Color(0xFFC0C0C0), // Use the desired color
+                        fontFamily: 'Inter', // Use the desired font family
+                        fontSize: 10.0, // Use the desired font size
+                        fontStyle: FontStyle.normal,
+                        fontWeight:
+                            FontWeight.w400, // Use the desired font weight
+                        height: 1.0, // Use 1.0 for normal line height
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Positioned(
-                top: 550,
-                left: 15,
-                child: Custombuttom(
-                  buttontext: "Sign In",
-                  onPressed: () {
-                    if (myKey.currentState!.validate()) {
-                      // Navigate to the HomeScreen when the button is pressed.
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const LayoutScreen(),
-                        ),
-                      );
-                    }
-                  },
+                SizedBox(
+                  height: 25,
                 ),
-              ),
-              const Positioned(top: 650, left: 50, child: CustomDivider()),
-              const Positioned(top: 670, left: 80, child: LoginWith())
-            ],
+                Row(
+                  children: [
+                    Spacer(),
+                    Custombuttom(
+                      buttontext: "Sign in",
+                      onPressed: () {},
+                    ),
+                    Spacer(),
+                  ],
+                ),
+                Container(
+                  padding: const EdgeInsets.only(
+                    top: 25,
+                    left: 49,
+                    right: 49,
+                    bottom: 16,
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Divider(
+                          color: Colors.black,
+                          height: 25,
+                          indent: 5,
+                          endIndent: 5,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                        width: 75,
+                        child: Text(
+                          "Or sign in with",
+                          style: TextStyle(
+                              color: Color(0xFFB8B8B8),
+                              fontWeight: FontWeight.w400,
+                              fontSize: 10),
+                        ),
+                      ),
+                      Expanded(
+                        child: Divider(
+                          color: Colors.black,
+                          height: 25,
+                          indent: 5,
+                          endIndent: 5,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 83,
+                    right: 83,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        onTap: () {},
+                        child: CircleAvatar(
+                          backgroundColor:
+                              const Color(0xFFC8B3FC).withOpacity(0.35),
+                          radius: 26,
+                          child: SvgPicture.asset(
+                            "assets/images/facebook.svg",
+                          ),
+                        ),
+                      ),
+                      Spacer(),
+                      InkWell(
+                        onTap: () {},
+                        child: CircleAvatar(
+                          backgroundColor: const Color(
+                            0xFFC8B3FC,
+                          ).withOpacity(0.35),
+                          radius: 26,
+                          child: SvgPicture.asset(
+                            "assets/images/google.svg",
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-      ),
-    );
+        ],
+      )),
+    ));
   }
 }

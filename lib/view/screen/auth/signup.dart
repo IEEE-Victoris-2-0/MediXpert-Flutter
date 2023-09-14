@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tecdoc/core/shared/custombuttom.dart';
-import 'package:tecdoc/core/shared/customfield.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tecdoc/controller/medi_bloc.dart';
+import 'package:tecdoc/view/widget/authWidget/login/custombuttom.dart';
+import 'package:tecdoc/view/widget/authWidget/login/customfield.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tecdoc/view/screen/auth/login.dart';
 import 'package:tecdoc/view/screen/home.dart';
+import 'package:tecdoc/view/widget/authWidget/login/fields.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -14,6 +17,11 @@ class Signup extends StatefulWidget {
 
 class _SignupState extends State<Signup> {
   GlobalKey<FormState> myKey = GlobalKey<FormState>();
+  TextEditingController username = new TextEditingController();
+  TextEditingController useremail = new TextEditingController();
+  TextEditingController userpassword = new TextEditingController();
+  TextEditingController userphone = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,69 +73,68 @@ class _SignupState extends State<Signup> {
                       color: Color(0xFFC0C0C0)),
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.only(
-                  right: 30,
-                  left: 31,
-                ),
-                child: Form(
-                  key: myKey,
-                  child: Column(
-                    children: [
-                      CustomField(
-                        hinttext: "username",
-                        iconData: Icons.person,
-                        valid: (text) {
-                          if (text!.isEmpty) {
-                            return "This field is required";
-                          } else {
-                            return null;
-                          }
-                        },
+              BlocBuilder<MediBloc, MediState>(
+                builder: (context, state) {
+                  if (state is SignupState) {
+                    return Container(
+                      padding: const EdgeInsets.only(
+                        right: 30,
+                        left: 31,
                       ),
-                      const SizedBox(
-                        height: 14,
+                      child: Form(
+                        key: myKey,
+                        child: Column(
+                          children: [
+                            CustomField(
+                              mycontroller: username,
+                              hinttext: "username",
+                              iconData: Icons.person,
+                              valid: (text) {
+                                return null;
+                              },
+                            ),
+                            const SizedBox(
+                              height: 14,
+                            ),
+                            CustomField(
+                              mycontroller: useremail,
+                              hinttext: "email",
+                              iconData: Icons.email,
+                              valid: (text) {
+                                return null;
+                              },
+                            ),
+                            const SizedBox(
+                              height: 14,
+                            ),
+                            CustomField(
+                              mycontroller: userpassword,
+                              hinttext: "password",
+                              iconData: Icons.lock,
+                              valid: (text) {
+                                return null;
+                              },
+                            ),
+                            const SizedBox(
+                              height: 14,
+                            ),
+                            CustomField(
+                              mycontroller: userphone,
+                              hinttext: "Phone number",
+                              iconData: Icons.call,
+                              valid: (text) {
+                                return null;
+                              },
+                            ),
+                          ],
+                        ),
                       ),
-                      CustomField(
-                        hinttext: "email",
-                        iconData: Icons.email,
-                        valid: (text) {
-                          if (text!.isEmpty) {
-                            return "This field is required";
-                          } else {
-                            return null;
-                          }
-                        },
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      CustomField(
-                          hinttext: "password",
-                          iconData: Icons.lock,
-                          valid: (text) {
-                            if (text!.isEmpty) {
-                              return "This field is required";
-                            } else {
-                              return null;
-                            }
-                          }),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      CustomField(
-                          hinttext: "Phone number",
-                          iconData: Icons.call,
-                          valid: (text) {
-                            if (text!.isEmpty) {
-                              return "This field is required";
-                            } else {
-                              return null;
-                            }
-                          }),
-                    ],
-                  ),
-                ),
+                    );
+                  } else if (state is MediInitial) {
+                    return Fields();
+                  }
+                  return SizedBox();
+                },
               ),
               SizedBox(
                 height: 54,
@@ -138,6 +145,11 @@ class _SignupState extends State<Signup> {
                   Custombuttom(
                     buttontext: "Sign Up",
                     onPressed: () {
+                      BlocProvider.of<MediBloc>(context).add(SignupEvent(
+                          username.text,
+                          useremail.text,
+                          userpassword.text,
+                          userphone.text));
                       if (myKey.currentState!.validate()) {
                         Navigator.of(context).pushReplacement(
                             MaterialPageRoute(builder: (context) {

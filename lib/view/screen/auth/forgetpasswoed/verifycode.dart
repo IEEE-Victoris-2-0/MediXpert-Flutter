@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tecdoc/view/screen/auth/forgetpasswoed/forgetpassword.dart';
 import 'package:tecdoc/view/screen/auth/forgetpasswoed/resetpassword.dart';
-import 'package:tecdoc/view/widget/authWidget/login/Forgetpassword/forgetbutton.dart';
-import 'package:tecdoc/view/widget/authWidget/login/Forgetpassword/forgetfield.dart';
+import 'package:tecdoc/view/widget/authWidget/Forgetpassword/forgetbutton.dart';
+import 'package:tecdoc/view/widget/authWidget/Forgetpassword/forgetfield.dart';
 
 class VerifyCode extends StatelessWidget {
   const VerifyCode({super.key});

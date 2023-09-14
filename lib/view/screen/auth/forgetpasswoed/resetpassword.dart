@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tecdoc/core/shared/customfield.dart';
+import 'package:tecdoc/view/widget/authWidget/login/customfield.dart';
 import 'package:tecdoc/view/screen/auth/forgetpasswoed/forgetpassword.dart';
-import 'package:tecdoc/view/widget/authWidget/login/Forgetpassword/forgetbutton.dart';
+import 'package:tecdoc/view/widget/authWidget/Forgetpassword/forgetbutton.dart';
 
 class ResetPassword extends StatefulWidget {
   const ResetPassword({super.key});

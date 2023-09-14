@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/shared/customfield.dart';
+import 'customfield.dart';
 
 class TextFields extends StatelessWidget {
   const TextFields({super.key});
