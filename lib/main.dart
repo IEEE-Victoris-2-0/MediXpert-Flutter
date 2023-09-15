@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tecdoc/api/api.dart';
 import 'package:tecdoc/controller/medi_bloc.dart';
-import 'package:tecdoc/view/screen/onboarding.dart';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tecdoc/view/screen/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       child: const MaterialApp(
           debugShowCheckedModeBanner: false,
           title: "midxipert",
-          home:OnBoardingScreen()),
+          home: SplashScreen()),
     );
   }
 }

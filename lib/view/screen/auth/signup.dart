@@ -17,10 +17,10 @@ class Signup extends StatefulWidget {
 
 class _SignupState extends State<Signup> {
   GlobalKey<FormState> myKey = GlobalKey<FormState>();
-  TextEditingController username = new TextEditingController();
-  TextEditingController useremail = new TextEditingController();
-  TextEditingController userpassword = new TextEditingController();
-  TextEditingController userphone = new TextEditingController();
+  TextEditingController username = TextEditingController();
+  TextEditingController useremail = TextEditingController();
+  TextEditingController userpassword = TextEditingController();
+  TextEditingController userphone = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -131,9 +131,9 @@ class _SignupState extends State<Signup> {
                       ),
                     );
                   } else if (state is MediInitial) {
-                    return Fields();
+                    return const Fields();
                   }
-                  return SizedBox();
+                  return const SizedBox();
                 },
               ),
               const SizedBox(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tecdoc/view/screen/pharmacyprofile.dart';
 
 import '../../../core/class/pharmacylist.dart';
 
@@ -28,13 +29,20 @@ class CustomGridleView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               if (item.photoUrl != null) // Check if a photo URL exists
-                ClipOval(
-                  child: Image.asset(
-                    item.photoUrl!, // Replace with your image asset path
-                    width: 100, // Adjust the image width as needed
-                    height: 100, // Adjust the image height as needed
-                    fit: BoxFit
-                        .cover, // Optional: Adjust the BoxFit to control how the image is scaled
+                InkWell(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const PharmayProfile()),
+                  ),
+                  child: ClipOval(
+                    child: Image.asset(
+                      item.photoUrl!, // Replace with your image asset path
+                      width: 100, // Adjust the image width as needed
+                      height: 100, // Adjust the image height as needed
+                      fit: BoxFit
+                          .cover, // Optional: Adjust the BoxFit to control how the image is scaled
+                    ),
                   ),
                 ),
               const SizedBox(height: 8.0),

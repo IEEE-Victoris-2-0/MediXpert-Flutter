@@ -1,11 +1,11 @@
 part of 'medi_bloc.dart';
 
-@immutable
 sealed class MediState {}
 
 final class MediInitial extends MediState {}
 
 class SignupState extends MediState {
-  final   user;
+  // ignore: prefer_typing_uninitialized_variables
+  late final user;
   SignupState(this.user);
 }

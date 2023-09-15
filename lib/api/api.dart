@@ -15,9 +15,9 @@ class UserAPI {
     }, headers: {
       "Accept": "application/json"
     });
-    print("=================================");
-    print(jsonDecode(response.body));
-    print("========================================");
+    // print("=================================");
+    // print(jsonDecode(response.body));
+    // print("========================================");
     return SignupModel.fromJson(jsonDecode(response.body));
   }
 }

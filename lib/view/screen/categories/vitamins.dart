@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tecdoc/view/widget/categorieWidget/categorieField.dart';
+import 'package:tecdoc/view/widget/categorieWidget/categoriefield.dart';
 import 'package:tecdoc/view/widget/categorieWidget/medication.dart';
 
 class Vitamins extends StatefulWidget {
@@ -14,7 +14,7 @@ class _VitaminsState extends State<Vitamins> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(200, 179, 252, 0.49),
+        backgroundColor: const Color.fromRGBO(200, 179, 252, 0.49),
         body: Padding(
           padding: const EdgeInsets.only(left: 33, right: 33, top: 65),
           child: SingleChildScrollView(
@@ -27,22 +27,24 @@ class _VitaminsState extends State<Vitamins> {
                       height: 37,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color(0xFFFFFFFF).withOpacity(0.37)),
+                          color: const Color(0xFFFFFFFF).withOpacity(0.37)),
                       child: Padding(
                         padding: const EdgeInsets.only(
                           left: 6,
                         ),
                         child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          icon: const Icon(
                             Icons.arrow_back_ios,
                             color: Colors.white,
                           ),
                         ),
                       ),
                     ),
-                    Spacer(),
-                    Text(
+                    const Spacer(),
+                    const Text(
                       "Vitamins",
                       style: TextStyle(
                         color: Color(0xFFFFFFFF),
@@ -50,8 +52,8 @@ class _VitaminsState extends State<Vitamins> {
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    Spacer(),
-                    CircleAvatar(
+                    const Spacer(),
+                    const CircleAvatar(
                       radius: 15,
                       backgroundColor: Color.fromRGBO(255, 144, 144, 0.49),
                       child: Text(
@@ -65,19 +67,19 @@ class _VitaminsState extends State<Vitamins> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 36,
                 ),
-                CategorieField(
+                const CategorieField(
                   iconData: Icons.search,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 47,
                 ),
                 Column(
                   children: List.generate(
                     6,
-                    (index) => Column(
+                    (index) => const Column(
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,

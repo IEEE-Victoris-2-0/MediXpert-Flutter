@@ -29,7 +29,7 @@ class _CallDrState extends State<CallDr> {
               child: SearchField(),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 20.0),
+              padding: EdgeInsets.only(left: 20.0, bottom: 10),
               child: Text(
                 "Let’s Find Your Pharmacy",
                 style: TextStyle(
@@ -43,7 +43,7 @@ class _CallDrState extends State<CallDr> {
               ),
             ),
             SizedBox(
-              height: 600,
+              height: 440,
               child: CustomGridleView(),
             ),
           ],
