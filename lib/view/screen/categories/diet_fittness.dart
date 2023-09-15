@@ -33,9 +33,7 @@ class _DietFitnessState extends State<DietFitness> {
                           left: 6,
                         ),
                         child: IconButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
+                          onPressed: () {},
                           icon: const Icon(
                             Icons.arrow_back_ios,
                             color: Colors.white,

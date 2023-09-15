@@ -33,10 +33,7 @@ class _MedicationState extends State<Medication> {
                           left: 6,
                         ),
                         child: IconButton(
-                          onPressed: () {
-                            Navigator.of(context)
-                                .pop(); // This will pop the current screen and go back
-                          },
+                          onPressed: () {},
                           icon: const Icon(
                             Icons.arrow_back_ios,
                             color: Colors.white,

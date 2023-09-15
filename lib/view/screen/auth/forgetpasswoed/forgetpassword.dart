@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tecdoc/view/widget/authWidget/Forgetpassword/forgetdialog.dart';
 import 'package:tecdoc/view/widget/authWidget/login/customfield.dart';
-import 'package:tecdoc/view/screen/auth/forgetpasswoed/verifycode.dart';
 import 'package:tecdoc/view/screen/auth/login.dart';
 import 'package:tecdoc/view/widget/authWidget/Forgetpassword/forgetbutton.dart';
 
@@ -126,13 +126,9 @@ class ForgetPassword extends StatelessWidget {
                 buttontext: "Send",
                 onPressed: () {
                   if (myKey.currentState!.validate()) {
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return const VerifyCode();
-                        },
-                      ),
-                    );
+                    showDialog(context: context, builder: (context){
+                      return ForgetDialog();
+                    }) ;  
                   }
                 },
               ),
