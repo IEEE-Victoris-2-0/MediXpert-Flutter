@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tecdoc/controller/Signupblock/medi_bloc.dart';
+import 'package:tecdoc/controller/userbloc/medi_bloc.dart';
 import 'package:tecdoc/view/widget/authWidget/login/custombuttom.dart';
 import 'package:tecdoc/view/widget/authWidget/login/customfield.dart';
 import 'package:flutter_svg/flutter_svg.dart';
