@@ -126,9 +126,11 @@ class ForgetPassword extends StatelessWidget {
                 buttontext: "Send",
                 onPressed: () {
                   if (myKey.currentState!.validate()) {
-                    showDialog(context: context, builder: (context){
-                      return ForgetDialog();
-                    }) ;  
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return const ForgetDialog();
+                        });
                   }
                 },
               ),

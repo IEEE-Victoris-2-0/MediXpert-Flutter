@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
       child: const MaterialApp(
           debugShowCheckedModeBanner: false,
           title: "midxipert",
-          home: OnBoardingScreen()),
+          home: ForgetPassword()),
     );
   }
 }

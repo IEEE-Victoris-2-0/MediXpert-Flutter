@@ -25,7 +25,7 @@ class CartCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
-      height: 124,
+      height: 120,
       width: double.infinity,
       child: Stack(
         children: [
@@ -40,14 +40,14 @@ class CartCard extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               )),
-           Positioned(
+          const Positioned(
             left: 89,
             top: 14,
             child: SizedBox(
               width: 141,
               height: 22,
               child: Text(
-                textone,
+                "EGP350.00",
                 style: TextStyle(
                     color: Color(0XFF7642F9),
                     fontFamily: 'Poppins',
@@ -72,14 +72,14 @@ class CartCard extends StatelessWidget {
               ),
             ),
           ),
-           Positioned(
+          const Positioned(
             left: 89,
             top: 82,
             child: SizedBox(
               width: 73,
               height: 13,
               child: Text(
-                textthree,
+                "EGP350.00",
                 style: TextStyle(
                     color: Color(0XFF7642F9),
                     fontFamily: 'Poppins',

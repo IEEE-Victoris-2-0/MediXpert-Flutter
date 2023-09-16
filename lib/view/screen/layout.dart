@@ -16,11 +16,11 @@ class LayoutScreen extends StatefulWidget {
 class _LayoutScreenState extends State<LayoutScreen> {
   int _selectedIndex = 0;
 
-  static const List<Widget> _pages = <Widget>[
-    Home(),
-    CallDr(),
-    Locatin(),
-    Cart()
+  static final List<Widget> _pages = <Widget>[
+    const Home(),
+    const CallDr(),
+    const Location(),
+    const Cart()
   ];
 
   void _onItemTapped(int index) {

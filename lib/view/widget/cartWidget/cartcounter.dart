@@ -21,7 +21,7 @@ class CartCounter extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-               BlocProvider.of<CounterBloc>(context).add(IncremenEvent());
+              BlocProvider.of<CounterBloc>(context).add(IncremenEvent());
             },
             child: Container(
               height: 37,

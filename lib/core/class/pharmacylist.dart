@@ -15,24 +15,24 @@ List<PharmacyList> items = [
       evaluationnumber: '5',
       photoUrl: "assets/images/pharmacy (1).png"),
   PharmacyList(
-      name: ' Pharamaleo Pharmacy',
+      name: ' RX Pharmacy',
       evaluationnumber: '4',
-      photoUrl: "assets/images/pharmacy (1).png"),
+      photoUrl: "assets/images/RX Pharmacy.png"),
   PharmacyList(
-      name: ' Pharamaleo  Pharmacy',
+      name: ' Phara Nece',
       evaluationnumber: '3',
-      photoUrl: "assets/images/pharmacy (1).png"),
+      photoUrl: "assets/images/phara nece.png"),
   PharmacyList(
-      name: ' Pharamaleo Pharmacy',
+      name: ' Medical Pharmacy',
       evaluationnumber: '4',
-      photoUrl: "assets/images/pharmacy (1).png"),
+      photoUrl: "assets/images/medical pharmacy.png"),
   PharmacyList(
-      name: ' Pharamaleo Pharmacy',
+      name: ' KNG Para',
       evaluationnumber: '2',
-      photoUrl: "assets/images/pharmacy (1).png"),
+      photoUrl: "assets/images/KNG para.png"),
   PharmacyList(
-      name: ' Pharamaleo Pharmacy',
+      name: ' Health Care',
       evaluationnumber: '5',
-      photoUrl: "assets/images/pharmacy (1).png"),
+      photoUrl: "assets/images/health care.png"),
   // Add more items as needed
 ];

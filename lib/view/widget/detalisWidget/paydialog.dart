@@ -13,12 +13,10 @@ class _PayDialogState extends State<PayDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(25)
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
       content: SizedBox(
-         width: 266,
-      height: 249,
+        width: 266,
+        height: 249,
         child: Column(
           children: [
             Image.asset('assets/images/right.png'),
@@ -32,13 +30,13 @@ class _PayDialogState extends State<PayDialog> {
                       borderRadius: BorderRadius.circular(12)),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
                     return const OrderTrack();
                   }));
                 },
                 child: const Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 25, vertical: 14),
+                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 14),
                   child: Text(
                     'Check Order status',
                     style: TextStyle(
@@ -59,13 +57,13 @@ class _PayDialogState extends State<PayDialog> {
                       borderRadius: BorderRadius.circular(12)),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                    return Home();
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return const Home();
                   }));
                 },
                 child: const Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 25, vertical: 14),
+                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 14),
                   child: Text(
                     'Continue Shopping',
                     style: TextStyle(

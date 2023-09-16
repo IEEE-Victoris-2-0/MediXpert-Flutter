@@ -13,13 +13,10 @@ class DetalisField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         boxShadow: [
-          BoxShadow(
-            color: Color.fromRGBO(118, 66, 249, 0.30),
-            blurRadius: 12
-          ),
+          BoxShadow(color: Color.fromRGBO(118, 66, 249, 0.30), blurRadius: 12),
         ],
       ),
       height: 54,
@@ -29,8 +26,8 @@ class DetalisField extends StatelessWidget {
         decoration: InputDecoration(
             filled: true,
             fillColor: const Color(0xFFFFFFFF),
-           hintText: hintText,
-           hintStyle: const TextStyle(
+            hintText: hintText,
+            hintStyle: const TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w400,
               fontFamily: 'Poppins',
