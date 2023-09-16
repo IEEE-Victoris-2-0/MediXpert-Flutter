@@ -34,8 +34,8 @@ class Pay extends StatelessWidget {
               ),
               const PayInfo(
                 text1: 'Home',
-                text2: '+201056432176',
-                text3: "New Cairo 16 st.",
+                text2: '+20 106 235 2147',
+                text3: "Ahmed Maht st.",
               ),
               const SizedBox(
                 height: 31,
