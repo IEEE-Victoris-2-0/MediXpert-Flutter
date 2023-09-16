@@ -23,8 +23,7 @@ class _IncrementDecrementContainerState
     setState(() {
       if (count > 0) {
         count--;
-      }
-      print("Count: $count"); // Add this line for debugging
+      } // Add this line for debugging
     });
   }
 

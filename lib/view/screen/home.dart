@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tecdoc/view/screen/loaction.dart';
 import 'package:tecdoc/view/widget/homeWidget/header.dart';
 
 import '../widget/homeWidget/categoriespart.dart';
@@ -14,10 +15,83 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       drawerEnableOpenDragGesture: false,
-      drawer: Drawer(),
-      body: SafeArea(
+      drawer: Drawer(
+          backgroundColor: const Color(0xC8B3FCE8),
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              Column(
+                children: [
+                  const UserAccountsDrawerHeader(
+                      accountName:
+                          Text('Maria Adel'), // Add your profile name here
+                      accountEmail: Text('mariaadel@gmail.com'),
+                      currentAccountPicture: CircleAvatar(
+                        backgroundImage: AssetImage(
+                            'assets/images/profile.jpg'), // Add your profile photo here
+                      )),
+                  ListTile(
+                    leading: const Icon(Icons.shopping_cart),
+                    title: const Text('Orders'),
+                    onTap: () {
+                      // Navigate to the Orders screen
+                      Navigator.pop(context); // Close the drawer
+                      // Add navigation logic to the Orders screen
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.location_on),
+                    title: const Text('Location'),
+                    onTap: () {
+                      // Navigate to the Location screen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Location()),
+                      ); // Close the drawer
+                      // Add navigation logic to the Location screen
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.notifications),
+                    title: const Text('Notifications'),
+                    onTap: () {
+                      // Navigate to the Notifications screen
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => ()),
+                      // ); // Close the drawer
+                      // Add navigation logic to the Notifications screen
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.favorite),
+                    title: const Text('Favorites'),
+                    onTap: () {
+                      // Navigate to the Favorites screen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Favou()),
+                      ); // Close the drawer
+                      // Add navigation logic to the Favorites screen
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.exit_to_app),
+                    title: const Text('Sign Out'),
+                    onTap: () {
+                      // Implement sign-out logic
+                      Navigator.pop(context); // Close the drawer
+                      // Add sign-out logic here
+                    },
+                  ),
+                ],
+              )
+            ],
+          )),
+      body: const SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

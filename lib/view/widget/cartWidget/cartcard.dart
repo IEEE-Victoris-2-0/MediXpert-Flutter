@@ -19,13 +19,13 @@ class CartCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(blurRadius: 20, color: Color.fromRGBO(220, 216, 216, 0.54)),
         ],
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
-      height: 124,
+      height: 120,
       width: double.infinity,
       child: Stack(
         children: [
@@ -35,7 +35,7 @@ class CartCard extends StatelessWidget {
               child: Image.asset(
                 path,
               )),
-          Positioned(
+          const Positioned(
             left: 89,
             top: 14,
             child: SizedBox(
@@ -43,7 +43,7 @@ class CartCard extends StatelessWidget {
               height: 22,
               child: Text(
                 "EGP350.00",
-                style: const TextStyle(
+                style: TextStyle(
                     color: Color(0XFF7642F9),
                     fontFamily: 'Poppins',
                     fontSize: 14,
@@ -67,7 +67,7 @@ class CartCard extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: 89,
             top: 82,
             child: SizedBox(
@@ -75,7 +75,7 @@ class CartCard extends StatelessWidget {
               height: 13,
               child: Text(
                 "EGP350.00",
-                style: const TextStyle(
+                style: TextStyle(
                     color: Color(0XFF7642F9),
                     fontFamily: 'Poppins',
                     fontSize: 11,

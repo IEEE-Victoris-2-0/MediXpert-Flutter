@@ -11,23 +11,24 @@ class _CartFieldState extends State<CartField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 45,
+      height: 0,
       width: double.infinity,
       decoration: BoxDecoration(
           color: Colors.white,
-          boxShadow: [
-            const BoxShadow(
+          boxShadow: const [
+            BoxShadow(
                 blurRadius: 10, color: Color.fromRGBO(220, 216, 216, 0.54)),
           ],
           borderRadius: BorderRadius.circular(12)),
       child: Stack(
+        clipBehavior: Clip.none,
         children: [
           const Positioned(
             left: 30,
-            top: 23,
+            top: 0,
             child: SizedBox(
               width: 142,
-              height: 21,
+              height: 5,
               child: TextField(
                 decoration: InputDecoration(
                     border: InputBorder.none,

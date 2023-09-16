@@ -5,15 +5,12 @@ class Visa extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Color(0XFFEDE6FE),
-        body: Column(
-          children: [
-            
-          ],
-        ),
-      )
-      );
+    return const SafeArea(
+        child: Scaffold(
+      backgroundColor: Color(0XFFEDE6FE),
+      body: Column(
+        children: [],
+      ),
+    ));
   }
 }
