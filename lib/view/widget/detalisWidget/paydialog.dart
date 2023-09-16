@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tecdoc/view/screen/home.dart';
+import 'package:tecdoc/view/screen/layout.dart';
 import 'package:tecdoc/view/screen/ordertrack.dart';
 
 class PayDialog extends StatefulWidget {
@@ -59,7 +59,7 @@ class _PayDialogState extends State<PayDialog> {
                 onPressed: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {
-                    return const Home();
+                    return const LayoutScreen();
                   }));
                 },
                 child: const Padding(

@@ -41,19 +41,31 @@ class _LayoutScreenState extends State<LayoutScreen> {
           child: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: Icon(
+                  Icons.home,
+                  size: 25,
+                ),
                 label: 'Home',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.phone),
+                icon: Icon(
+                  Icons.phone,
+                  size: 25,
+                ),
                 label: 'Call Dr',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.location_on_rounded),
+                icon: Icon(
+                  Icons.location_on_rounded,
+                  size: 25,
+                ),
                 label: 'Location',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart_outlined),
+                icon: Icon(
+                  Icons.shopping_cart_outlined,
+                  size: 25,
+                ),
                 label: 'Cart',
               ),
             ],

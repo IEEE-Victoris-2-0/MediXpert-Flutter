@@ -31,6 +31,7 @@ class TextFields extends StatelessWidget {
           width: 314,
           height: 66,
           child: CustomField(
+            obscureText: true,
             hinttext: "password",
             iconData: Icons.lock,
             valid: (text) {

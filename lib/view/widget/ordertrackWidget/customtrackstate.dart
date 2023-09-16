@@ -9,7 +9,7 @@ class CustomOrderState extends StatefulWidget {
 }
 
 class _CustomOrderStateState extends State<CustomOrderState> {
-  String selectedState = 'Ordered'; // Initial selected state
+  String selectedState = 'Ordered Confirmed'; // Initial selected state
 
   @override
   Widget build(BuildContext context) {

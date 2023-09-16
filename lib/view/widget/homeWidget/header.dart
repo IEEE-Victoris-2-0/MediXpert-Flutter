@@ -24,14 +24,20 @@ class HeaderPart extends StatelessWidget {
               MaterialButton(
                   child: Padding(
                     padding: const EdgeInsets.only(top: 20.0),
-                    child: Container(
-                      width: 45, // Width in logical pixels
-                      height: 44, // Height in logical pixels
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8), // Border radius
-                        color: Colors.white, // Background color
-                      ),
-                      child: SvgPicture.asset("assets/images/home2.svg"),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          width: 45, // Width in logical pixels
+                          height: 44, // Height in logical pixels
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(8), // Border radius
+                            color: Colors.white, // Background color
+                          ),
+                          child: SvgPicture.asset("assets/images/home2.svg"),
+                        ),
+                      ],
                     ),
                   ),
                   onPressed: () => Scaffold.of(context).openDrawer()),
@@ -44,10 +50,10 @@ class HeaderPart extends StatelessWidget {
             child: SvgPicture.asset("assets/images/circule.svg")),
         Positioned(
             bottom: 40, child: SvgPicture.asset("assets/images/circule.svg")),
-        Positioned(
-            bottom: 180,
-            left: 300,
-            child: SvgPicture.asset("assets/images/circule.svg")),
+        // Positioned(
+        //     bottom: 200,
+        //     left: 30,
+        //     child: SvgPicture.asset("assets/images/circule.svg")),
         Positioned(
             bottom: 200,
             right: 150,

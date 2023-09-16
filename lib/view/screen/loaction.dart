@@ -74,15 +74,19 @@ class _LocationState extends State<Location> {
                 });
               },
               child: Container(
-                padding: const EdgeInsets.all(8.0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(8.0),
+                width: 375,
+                height: 240,
+                padding: const EdgeInsets.all(30.0),
+                decoration: const BoxDecoration(
+                  color: Color(0xFFC8B3FC),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30)),
                 ),
                 child: Text(
-                  isContainerVisible ? 'Hide' : 'Show',
+                  isContainerVisible ? 'Hide' : 'search by location',
                   style: const TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

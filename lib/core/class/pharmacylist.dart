@@ -17,7 +17,7 @@ List<PharmacyList> items = [
   PharmacyList(
       name: ' RX Pharmacy',
       evaluationnumber: '4',
-      photoUrl: "assets/images/RX Pharmacy.png"),
+      photoUrl: "assets/images/RX pharmacy.png"),
   PharmacyList(
       name: ' Phara Nece',
       evaluationnumber: '3',

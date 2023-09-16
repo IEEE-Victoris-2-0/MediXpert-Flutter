@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:tecdoc/view/screen/layout.dart';
 
-import '../widget/productdetailswidget/decrementincrement.dart';
+import '../widget/cartWidget/cartcounter.dart';
 
 class ProudctDetails extends StatefulWidget {
   const ProudctDetails({super.key});
@@ -23,12 +23,21 @@ class _ProudctDetailsState extends State<ProudctDetails> {
       decoration: const BoxDecoration(
         color: Color(0xFFC8B3FC), // Background color
       ),
+      child: Image.asset("assets/images/✔tvinzol.png"),
+    ),
+    Container(
+      width: 20,
+      height: 20,
+      decoration: const BoxDecoration(
+        color: Color(0xFFC8B3FC), // Background color
+      ),
     ),
     Container(
       margin: const EdgeInsets.only(top: 8.0, right: 16.0, bottom: 8.0),
       decoration: const BoxDecoration(
         color: Color(0xFFC8B3FC), // Background color
       ),
+      child: Image.asset("assets/images/download (1) 1.png"),
     ),
   ];
 
@@ -120,10 +129,7 @@ class _ProudctDetailsState extends State<ProudctDetails> {
                       ),
                     ),
                   ),
-                  const Positioned(
-                      top: 120,
-                      left: 300,
-                      child: IncrementDecrementContainer()),
+                  const Positioned(left: 280, top: 80, child: CartCounter())
                 ],
               ),
             ),
@@ -171,6 +177,33 @@ class _ProudctDetailsState extends State<ProudctDetails> {
                 ),
               ),
             ),
+            const Positioned(
+              top: 420,
+              child: Text(
+                "Reduction of elevated intraocular pressure\n (IOP) in patients with open-angle glaucoma\n or ocular hypertension who are insufficiently\n responsive to topical beta-blockers or\n prostaglandin analogs,\n Side effects :",
+                style: TextStyle(
+                  color: Color(0xFFC8B3FC),
+                  fontFamily: 'Poppins',
+                  fontSize: 15.0,
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ),
+            const Positioned(
+              top: 570,
+              child: Text(
+                "Eye burning, irritation, blurred vision, itching or corneal erosion\nEyelid irritation or inflammation",
+                style: TextStyle(
+                  color: Color(0xFFC8B3FC),
+                  fontFamily: 'Poppins',
+                  fontSize: 15.0,
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ),
+
             Positioned(
               top: 700,
               child: Row(
@@ -204,29 +237,38 @@ class _ProudctDetailsState extends State<ProudctDetails> {
                   const SizedBox(
                     width: 50,
                   ),
-                  Container(
-                    width: 250.0,
-                    height: 46.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12.0),
-                      color: const Color(0xFF7642F9), // Hexadecimal color value
-                      boxShadow: const [
-                        BoxShadow(
-                          offset: Offset(-3.0, 5.0),
-                          blurRadius: 11.0,
-                          spreadRadius: 0.0,
-                          color: Color.fromRGBO(187, 160, 255, 0.47),
-                        ),
-                      ],
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Add to Cart',
-                        style: TextStyle(
-                          color: Colors.white, // Text color
-                          fontFamily: 'Poppins',
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Card()));
+                    },
+                    child: Container(
+                      width: 250.0,
+                      height: 46.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.0),
+                        color:
+                            const Color(0xFF7642F9), // Hexadecimal color value
+                        boxShadow: const [
+                          BoxShadow(
+                            offset: Offset(-3.0, 5.0),
+                            blurRadius: 11.0,
+                            spreadRadius: 0.0,
+                            color: Color.fromRGBO(187, 160, 255, 0.47),
+                          ),
+                        ],
+                      ),
+                      child: const Center(
+                        child: Text(
+                          'Add to Cart',
+                          style: TextStyle(
+                            color: Colors.white, // Text color
+                            fontFamily: 'Poppins',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
                     ),

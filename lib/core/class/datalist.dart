@@ -14,7 +14,7 @@ List<DataList> dataListitem = [
   DataList(
     name: 'twinzol 30 single dose eye drops',
     price: 'EGP67.50',
-    photo: 'assets/images/panadol.png',
+    photo: 'assets/images/✔tvinzol.png',
     id: '1',
   ),
   DataList(

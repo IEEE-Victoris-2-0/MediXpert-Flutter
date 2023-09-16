@@ -22,31 +22,35 @@ class _HomeState extends State<Home> {
     return Scaffold(
       drawerEnableOpenDragGesture: false,
       drawer: Drawer(
-          backgroundColor: const Color(0xC8B3FCE8),
+          backgroundColor: const Color(0xFFC8B3FC),
           child: ListView(
+            shrinkWrap: true,
             padding: EdgeInsets.zero,
             children: <Widget>[
               Column(
                 children: [
                   const UserAccountsDrawerHeader(
+                      decoration: BoxDecoration(
+                        color: Color(0xFFC8B3FC),
+                      ),
                       accountName:
                           Text('Maria Adel'), // Add your profile name here
                       accountEmail: Text('mariaadel@gmail.com'),
                       currentAccountPicture: CircleAvatar(
                         backgroundImage: AssetImage(
-                            'assets/images/profile.jpg'), // Add your profile photo here
+                            'assets/images/profilephoto.png'), // Add your profile photo here
                       )),
                   ListTile(
-                    leading: const Icon(Icons.shopping_cart),
-                    title: const Text('Orders'),
-                    onTap: () {
-                      // Navigate to the Orders screen
-                      Navigator.pop(context); // Close the drawer
-                      // Add navigation logic to the Orders screen
-                    },
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.location_on),
+                    leading: Container(
+                      width: 36, // Adjust the width as needed
+                      height: 36, // Adjust the height as needed
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.white),
+                      child: const Icon(
+                        Icons.location_on,
+                        color: Color(0xFF7C47FC),
+                      ),
+                    ),
                     title: const Text('Location'),
                     onTap: () {
                       // Navigate to the Location screen
@@ -58,8 +62,22 @@ class _HomeState extends State<Home> {
                       // Add navigation logic to the Location screen
                     },
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   ListTile(
-                    leading: const Icon(Icons.notifications),
+                    leading: Container(
+                      width: 36, // Adjust the width as needed
+                      height: 36, // Adjust the height as needed
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                      child: const Icon(
+                        Icons.notifications,
+                        color: Color(0xFF7C47FC),
+                      ),
+                    ),
                     title: const Text('Notifications'),
                     onTap: () {
                       // Navigate to the Notifications screen
@@ -71,8 +89,22 @@ class _HomeState extends State<Home> {
                       // Add navigation logic to the Notifications screen
                     },
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   ListTile(
-                    leading: const Icon(Icons.favorite),
+                    leading: Container(
+                      width: 36, // Adjust the width as needed
+                      height: 36, // Adjust the height as needed
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                      child: const Icon(
+                        Icons.favorite,
+                        color: Color(0xFF7C47FC),
+                      ),
+                    ),
                     title: const Text('Favorites'),
                     onTap: () {
                       // Navigate to the Favorites screen
@@ -84,8 +116,22 @@ class _HomeState extends State<Home> {
                       // Add navigation logic to the Favorites screen
                     },
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   ListTile(
-                    leading: const Icon(Icons.shopping_cart),
+                    leading: Container(
+                      width: 36, // Adjust the width as needed
+                      height: 36, // Adjust the height as needed
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                      child: const Icon(
+                        Icons.shopping_cart,
+                        color: Color(0xFF7C47FC),
+                      ),
+                    ),
                     title: const Text('orders'),
                     onTap: () {
                       // Navigate to the Favorites screen
@@ -96,8 +142,22 @@ class _HomeState extends State<Home> {
                       // Add navigation logic to the Favorites screen
                     },
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   ListTile(
-                    leading: const Icon(Icons.exit_to_app),
+                    leading: Container(
+                      width: 36, // Adjust the width as needed
+                      height: 36, // Adjust the height as needed
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                      child: const Icon(
+                        Icons.exit_to_app,
+                        color: Color(0xFF7C47FC),
+                      ),
+                    ),
                     title: const Text('Sign Out'),
                     onTap: () {
                       // Implement sign-out logic

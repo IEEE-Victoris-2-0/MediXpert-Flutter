@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/class/pharmacylist.dart';
+import '../../../core/class/pharmacylocation.dart';
 
 class RecommendedPharmacy extends StatelessWidget {
   const RecommendedPharmacy({super.key});
@@ -8,35 +8,35 @@ class RecommendedPharmacy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        final item = items[index];
-
-        return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            width: 150,
-            decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(15)),
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Column(
-                children: [
-                  CircleAvatar(
-                    radius: 30, // Adjust the radius as needed
-                    backgroundImage: AssetImage(item.photoUrl ?? ""),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    item.name,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text("Evaluation: ${item.evaluationnumber}"),
-                ],
-              ),
+      itemCount: pharmacies.length,
+      itemBuilder: (BuildContext context, int index) {
+        final pharmacy = pharmacies[index];
+        return ListTile(
+          leading: const Icon(
+            Icons.location_on,
+            color: Colors.grey,
+            size: 24,
+          ),
+          title: Text(
+            pharmacy.name,
+            style: const TextStyle(
+              color: Color(0xFF7642F9),
+              // Other text styles like fontSize, fontWeight, etc. can be added here
+            ),
+          ),
+          subtitle: Text(
+            pharmacy.address,
+            style: const TextStyle(
+              color:
+                  Colors.black, // You can change the color to your preference
+              // Other text styles like fontSize, fontWeight, etc. can be added here
+            ),
+          ),
+          trailing: Text(
+            '${pharmacy.distance} miles',
+            style: const TextStyle(
+              color: Colors.white,
+              // Other text styles like fontSize, fontWeight, etc. can be added here
             ),
           ),
         );
