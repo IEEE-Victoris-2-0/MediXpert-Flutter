@@ -9,7 +9,8 @@ class MedicineCard extends StatelessWidget {
         width: 144,
         height: 154,
         decoration: BoxDecoration(
-            color: Color(0XFFFFFFFF), borderRadius: BorderRadius.circular(14)),
+            color: const Color(0XFFFFFFFF),
+            borderRadius: BorderRadius.circular(14)),
         child: Stack(
           children: [
             Positioned(
@@ -17,7 +18,7 @@ class MedicineCard extends StatelessWidget {
               child: Container(
                 width: 26,
                 height: 26,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Color(0XFFFF9090),
                     borderRadius:
                         BorderRadius.only(topRight: Radius.circular(14))),
@@ -35,17 +36,17 @@ class MedicineCard extends StatelessWidget {
               top: 118,
               child: CircleAvatar(
                   radius: 12,
-                  backgroundColor: Color(0XFFFF9090),
+                  backgroundColor: const Color(0XFFFF9090),
                   child: IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_forward_ios,
                       color: Color(0XFFFFFFFF),
                       size: 10,
                     ),
                   )),
             ),
-            Positioned(
+            const Positioned(
               left: 23,
               top: 109,
               child: SizedBox(
@@ -62,7 +63,7 @@ class MedicineCard extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 23,
               top: 122,
               child: Text(
@@ -75,7 +76,7 @@ class MedicineCard extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 23,
               top: 136,
               child: Text(

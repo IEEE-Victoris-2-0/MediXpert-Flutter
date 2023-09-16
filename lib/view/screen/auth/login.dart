@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tecdoc/view/screen/auth/forgetpasswoed/forgetpassword.dart';
 import 'package:tecdoc/view/screen/layout.dart';
 import 'package:tecdoc/view/widget/authWidget/login/divider.dart';
 import '../../widget/authWidget/login/backbutton.dart';
@@ -96,6 +97,12 @@ class _LoginState extends State<Login> {
                 top: 540,
                 left: 228,
                 child: GestureDetector(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            const ForgetPassword()), // Replace NextScreen with your screen
+                  ),
                   child: const Text(
                     'Forgot Password?',
                     style: TextStyle(
