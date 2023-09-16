@@ -41,10 +41,10 @@ class _CartState extends State<Cart> {
                 height: 20,
               ),
               const CartCard(
-                path: 'assets/images/cart1.png',
-                textone: 'QV Baby Bar 100g',
+                path: 'assets/images/cart22.png',
+                textone: 'twinzol eye drops',
                 texttwo: 'by Maria Phara',
-                textthree: 'EGP350.00',
+                textthree: 'EGP67.50',
               ),
               const SizedBox(
                 height: 20,
@@ -59,9 +59,9 @@ class _CartState extends State<Cart> {
               BlocBuilder<CounterBloc, CounterState>(           builder: (context, state) {
                   if(state is CounterValueChangedState){
                     return CartPay(
-                    subtotal: state.counter*350,
+                    subtotal: state.counter*67,
                     dilvery: 'Free',
-                    total: state.counter*350,
+                    total: state.counter*67,
                   );
                   }else if(state is CounterInitial){
                      return const CartPay(

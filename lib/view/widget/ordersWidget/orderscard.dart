@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:tecdoc/view/widget/cartWidget/cartcounter.dart';
 
-class CartCard extends StatelessWidget {
+class OrdersCard extends StatelessWidget {
   final String path;
   final String textone;
   final String texttwo;
   final String textthree;
+  final String state;
 
-  const CartCard(
+  const OrdersCard(
       {super.key,
       required this.path,
       required this.textone,
       required this.texttwo,
-      required this.textthree});
+      required this.textthree, required this.state});
 
   @override
   Widget build(BuildContext context) {
@@ -30,24 +29,24 @@ class CartCard extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-              left: 10,
+              left: 12,
               top: 10,
               child: SizedBox(
-                height: 104,
+                  height: 104,
                 width: 71,
                 child: Image.asset(
                   path,
                   fit: BoxFit.fill,
                 ),
               )),
-           Positioned(
+          const Positioned(
             left: 89,
             top: 14,
             child: SizedBox(
               width: 141,
               height: 22,
               child: Text(
-                textone,
+                "twinzol eye drops",
                 style: TextStyle(
                     color: Color(0XFF7642F9),
                     fontFamily: 'Poppins',
@@ -72,14 +71,14 @@ class CartCard extends StatelessWidget {
               ),
             ),
           ),
-           Positioned(
+          const Positioned(
             left: 89,
             top: 82,
             child: SizedBox(
               width: 73,
               height: 13,
               child: Text(
-                textthree,
+                "EGP67.50",
                 style: TextStyle(
                     color: Color(0XFF7642F9),
                     fontFamily: 'Poppins',
@@ -88,9 +87,19 @@ class CartCard extends StatelessWidget {
               ),
             ),
           ),
-          const Positioned(top: 14, right: 38, child: CartCounter()),
           Positioned(
-              top: 3, right: 6, child: SvgPicture.asset('assets/images/X.svg'))
+            left: 240,
+            top: 89,
+            child: Text(
+              state,
+              style: const TextStyle(
+                color: Color(0XFFC5F942),
+                fontSize: 13,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
         ],
       ),
     );
