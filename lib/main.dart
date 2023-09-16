@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tecdoc/api/api.dart';
 import 'package:tecdoc/controller/Signupblock/medi_bloc.dart';
 import 'package:tecdoc/controller/counterbloc/counter_bloc.dart';
+import 'package:tecdoc/view/screen/layout.dart';
 import 'package:tecdoc/view/screen/loaction.dart';
 import 'package:tecdoc/view/screen/ordertrack.dart';
 import 'package:tecdoc/view/screen/splash.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       child: const MaterialApp(
           debugShowCheckedModeBanner: false,
           title: "midxipert",
-          home: Location()),
+          home: LayoutScreen()),
     );
   }
 }

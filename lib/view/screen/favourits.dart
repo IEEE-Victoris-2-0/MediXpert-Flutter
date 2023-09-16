@@ -9,14 +9,10 @@ class Favourits extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(207, 196, 231, 0.49),
+        backgroundColor: const Color.fromRGBO(207, 196, 231, 0.49),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(
-              left: 29,
-              top: 53,
-              right: 27
-            ),
+            padding: const EdgeInsets.only(left: 29, top: 53, right: 27),
             child: Column(
               children: [
                 Row(
@@ -58,28 +54,27 @@ class Favourits extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 19,
                 ),
                 ListView.separated(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  itemBuilder: (context,i){
-                    final iteams=favlist[i];
-                    return FavCard(
-                      path: iteams.path, 
-                      text1: iteams.text1, 
-                      texttwo: iteams.text2, 
-                      text3: iteams.text3,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, i) {
+                      final iteams = favlist[i];
+                      return FavCard(
+                        path: iteams.path,
+                        text1: iteams.text1,
+                        texttwo: iteams.text2,
+                        text3: iteams.text3,
                       );
-                  }, 
-                  separatorBuilder: (context,i){
-                    return SizedBox(
-                      height: 38,
-                    );
-                  }, 
-                  itemCount: favlist.length
-                  ),
+                    },
+                    separatorBuilder: (context, i) {
+                      return const SizedBox(
+                        height: 38,
+                      );
+                    },
+                    itemCount: favlist.length),
               ],
             ),
           ),

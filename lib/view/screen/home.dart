@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:tecdoc/view/screen/auth/signup.dart';
 import 'package:tecdoc/view/screen/loaction.dart';
+import 'package:tecdoc/view/screen/orders.dart';
 import 'package:tecdoc/view/widget/homeWidget/header.dart';
 
 import '../widget/homeWidget/categoriespart.dart';
 import '../widget/homeWidget/itemdisplay.dart';
+import 'favourits.dart';
+import 'notificatons/notifications.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -59,10 +63,11 @@ class _HomeState extends State<Home> {
                     title: const Text('Notifications'),
                     onTap: () {
                       // Navigate to the Notifications screen
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => ()),
-                      // ); // Close the drawer
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyNotifications()),
+                      ); // Close the drawer
                       // Add navigation logic to the Notifications screen
                     },
                   ),
@@ -73,7 +78,20 @@ class _HomeState extends State<Home> {
                       // Navigate to the Favorites screen
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Favou()),
+                        MaterialPageRoute(
+                            builder: (context) => const Favourits()),
+                      ); // Close the drawer
+                      // Add navigation logic to the Favorites screen
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.shopping_cart),
+                    title: const Text('orders'),
+                    onTap: () {
+                      // Navigate to the Favorites screen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Orders()),
                       ); // Close the drawer
                       // Add navigation logic to the Favorites screen
                     },
@@ -83,7 +101,10 @@ class _HomeState extends State<Home> {
                     title: const Text('Sign Out'),
                     onTap: () {
                       // Implement sign-out logic
-                      Navigator.pop(context); // Close the drawer
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Signup()),
+                      ); // Close th // Close the drawer
                       // Add sign-out logic here
                     },
                   ),

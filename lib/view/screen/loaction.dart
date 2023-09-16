@@ -33,9 +33,11 @@ class _LocationState extends State<Location> {
               left: 0,
               right: 0,
               child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: const Color(0xFFC8B3FC),
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(50),
+                      topRight: Radius.circular(50)),
+                  color: Color(0xFFC8B3FC),
                 ),
                 width: double.infinity,
                 height: 600, // Adjust the height as neede
